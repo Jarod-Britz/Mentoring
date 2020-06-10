@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Mentoring",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -16,13 +16,14 @@
   transform: translate(-50%, -50%);
   font-size: 100px;
 }
-.featured{
+
+/* .featured{
     text-align: center;
 }
 .featured h1{
     margin-top: 5%;
-}
-.products{
+} */
+/* .products{
     display: flex;
     flex-wrap: wrap;
     padding: 0 10%;
@@ -36,7 +37,7 @@
 .products h5{
     margin: 5%;
     font-weight: bold;
-}
+} */
 
 .about{
     display:grid;
@@ -44,7 +45,6 @@
     grid-template-rows: 1fr;
     margin-top: 10%;
     padding: 5% 10%;
-    background: rgb(221, 220, 220);
 }
 .about img{
     width: 450px;
@@ -52,4 +52,25 @@
 }
 .about p{
     text-align: left;
+}
+
+
+.carousel{
+    padding: 0 10%;
+    text-align: center;
+    margin-top: 5%;
+}
+.carousel mat-card{
+    margin: 2%;
+}
+.carousel h5{
+    margin: 5%;
+    font-weight: bold;
+}
+
+
+
+footer{
+    background: rgb(221, 220, 220);
+    padding: 5% 10%;
 }

@@ -2,7 +2,7 @@
     <h1>FACEMASKS</h1>
 </div>
 
-<section class="featured">
+<!-- <section class="featured">
     <h1>FEATURED PRODUCTS</h1>
     <div class="products">
         <mat-card>
@@ -22,7 +22,46 @@
             <h5>Underwear Mask</h5>
         </mat-card>
     </div>
-</section>
+</section> -->
+
+
+<section class="carousel">
+    <h1>FEATURED PRODUCTS</h1>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <mat-card>
+                <img src="../../assets/mask21.jpg" alt="">
+                <h5>Lettuce Mask</h5>
+            </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+            <mat-card>
+                <img src="../../assets/mask5.jfif" alt="">
+                <h5>Nike AirMax Mask</h5>
+            </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+            <mat-card>
+                <img src="../../assets/mask3.jpg" alt="">
+                <h5>Pad Mask</h5>
+            </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+            <mat-card>
+                <img src="../../assets/mask41.jpg" alt="">
+                <h5>Underwear Mask</h5>
+            </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+            <mat-card>
+                <img src="../../assets/mask3.jpg" alt="">
+                <h5>Pad Mask</h5>
+            </mat-card>
+        </ng-template>
+    </owl-carousel-o>
+    </section>
+
+
 
 <section class="about">
     <div>
@@ -40,3 +79,17 @@
             beatae.</p>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+<footer>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti architecto in culpa odit voluptatibus
+    consequuntur suscipit ab reiciendis perspiciatis excepturi esse deleniti impedit rerum ipsam, ratione delectus
+    eligendi unde ducimus.
+</footer>

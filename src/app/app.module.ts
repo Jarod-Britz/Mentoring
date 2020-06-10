@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatToolbarModule,MatCardModule} from '@angular/material';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +19,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CarouselModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule
   ],
