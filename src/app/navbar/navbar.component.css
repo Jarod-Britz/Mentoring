@@ -1,0 +1,29 @@
+
+mat-toolbar{
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 70px;
+    background-color: white;
+    font-family: 'Bitter', serif;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.brand{
+    font-weight: bold;
+}
+span{
+    margin: 1%;
+    font-size: 20px;
+    line-height: 70px;
+    cursor: pointer;
+}
+img{
+    height: 50px;
+}
+span:hover{
+    color: grey;
+}
