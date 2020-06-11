@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatToolbarModule,MatCardModule} from '@angular/material';
+import {MatToolbarModule,MatCardModule,MatIconModule} from '@angular/material';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -22,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     CarouselModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

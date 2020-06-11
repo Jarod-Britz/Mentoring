@@ -1,25 +1,30 @@
 
 mat-toolbar{
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 70px;
+    height: 100px;
     background-color: white;
     font-family: 'Bitter', serif;
     position: sticky;
     top: 0;
     z-index: 1;
-}
-.example-spacer {
-    flex: 1 1 auto;
+    text-align: center;
 }
 .brand{
     font-weight: bold;
 }
-span{
-    margin: 1%;
-    font-size: 20px;
-    line-height: 70px;
+.links span{
+    font-size: 18px;
+    line-height: 100px;
     cursor: pointer;
+    text-align: center;
+}
+.story{
+    margin: 2%;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.links{
+    margin: 0 auto;
 }
 img{
     height: 50px;
