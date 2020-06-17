@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../products.service'
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
+products: any;
 
   customOptions: any = {
     loop: true,
@@ -37,9 +40,34 @@ export class HomeComponent implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(private productsService:ProductsService,private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.productsService.getProducts().subscribe(data => {
+      this.products = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+          isEdit: false,
+          Name: e.payload.doc.data()['name'],
+          Picture: e.payload.doc.data()['picture'],
+          Price: e.payload.doc.data()['price'],
+          Description: e.payload.doc.data()['description'],
+          Ingredients: e.payload.doc.data()['ingredients'],
+          nutritionalValue: e.payload.doc.data()['nutritional-value'],
+        };
+      })
+      console.log(this.products);
+      
+    })
+    
+      
+    }
+
+
+    getProduct(){
+      this.productsService.getProducts();
+      this.router.navigate(['/product-details']);
+    }
   }
 
-}
+
