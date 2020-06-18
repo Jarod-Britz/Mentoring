@@ -1,0 +1,56 @@
+
+.back{
+    color-adjust: grey;
+    margin-left: 10%;
+}
+.back:hover{
+    color: rgb(85, 85, 85);
+    cursor: pointer;
+}
+.name{
+    margin-left: 10%;
+}
+.products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 5%;
+}
+.details{
+    border: solid 1px black;
+    width: 300px;
+    padding: 2%;
+    margin: 0 auto;
+}
+.details p{
+    text-align: left;
+}
+.insert-class-name{
+    background-image: url("../../assets/chicken-salad.png");
+    height: 400px;
+    width: 400px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+.details .add{
+    background-color: white;
+    background-color: rgb(139, 90, 90);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: solid white 2px;
+    border-radius: 50%;
+}
+.details .checkout{
+    background-color: white;
+    background-color: rgb(139, 90, 90);
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    border: solid white 2px;
+    border-radius: 24px;
+    float: right;
+}
+

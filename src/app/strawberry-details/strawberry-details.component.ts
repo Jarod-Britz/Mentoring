@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 
 @Component({
-  selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.css']
+  selector: 'app-strawberry-details',
+  templateUrl: './strawberry-details.component.html',
+  styleUrls: ['./strawberry-details.component.css']
 })
-export class ProductDetailsComponent implements OnInit {
+export class StrawberryDetailsComponent implements OnInit {
 selectedProduct;
 products;
 
@@ -25,11 +25,11 @@ this.productsService.getProducts().subscribe(data => {
         return {
           id: e.payload.doc.id,
           isEdit: false,
-          Name: e.payload.doc.data()['name'],
-          Picture: e.payload.doc.data()['picture'],
-          Price: e.payload.doc.data()['price'],
-          Description: e.payload.doc.data()['description'],
-          Ingredients: e.payload.doc.data()['ingredients'],
+          name: e.payload.doc.data()['name'],
+          picture: e.payload.doc.data()['picture'],
+          price: e.payload.doc.data()['price'],
+          description: e.payload.doc.data()['description'],
+          ingredients: e.payload.doc.data()['ingredients'],
           nutritionalValue: e.payload.doc.data()['nutritional-value'],
         };
       })

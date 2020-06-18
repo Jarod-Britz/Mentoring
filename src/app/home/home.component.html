@@ -7,7 +7,7 @@
 <section class="carousel">
     <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide>
-            <div class="background1" (click)="getProduct(product)">
+            <div class="background1" (click)="getProduct1(product)">
                 <div></div>
                 <div class=" dotted"></div>
                 <h1>Product Name</h1>
@@ -18,7 +18,7 @@
             </div>
         </ng-template>
         <ng-template carouselSlide>
-            <div class="background2" routerLink="">
+            <div class="background2" (click)="getProduct2(product)">
                 <div></div>
                 <div class=" dotted"></div>
                 <h1>Product Name</h1>
@@ -30,7 +30,7 @@
         </ng-template>
         <ng-template carouselSlide>
             
-            <div class="background3" routerLink="">
+            <div class="background3" (click)="getProduct3(product)">
                 <div></div>
                 <div class=" dotted"></div>
                 <h1>Product Name</h1>
@@ -42,6 +42,7 @@
         </ng-template>
     </owl-carousel-o>
 </section>
+
 
 
 

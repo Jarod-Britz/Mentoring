@@ -13,14 +13,18 @@ import { HomeComponent } from './home/home.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { StrawberryDetailsComponent } from './strawberry-details/strawberry-details.component';
+import { BerrySmoothieComponent } from './berry-smoothie/berry-smoothie.component';
+import { ChickenSaladComponent } from './chicken-salad/chicken-salad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ProductDetailsComponent
+    StrawberryDetailsComponent,
+    BerrySmoothieComponent,
+    ChickenSaladComponent
   ],
   imports: [
     BrowserModule,

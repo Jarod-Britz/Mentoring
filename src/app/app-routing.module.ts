@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { StrawberryDetailsComponent } from './strawberry-details/strawberry-details.component';
+import { BerrySmoothieComponent } from './berry-smoothie/berry-smoothie.component';
+import { ChickenSaladComponent } from './chicken-salad/chicken-salad.component';
 
 
 const routes: Routes = [
@@ -10,9 +12,17 @@ const routes: Routes = [
     component:HomeComponent
  },
  {
-   path:'product-details',
-    component:ProductDetailsComponent
- }
+   path:'strawberry-details',
+    component:StrawberryDetailsComponent
+ },
+ {
+   path:'berry-smoothie',
+    component:BerrySmoothieComponent
+ },
+ {
+   path:'chicken-salad',
+    component:ChickenSaladComponent
+ },
 
 ];
 
