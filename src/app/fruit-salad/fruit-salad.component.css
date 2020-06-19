@@ -7,7 +7,7 @@
     color: rgb(85, 85, 85);
     cursor: pointer;
 }
-h1{
+.name{
     margin-left: 10%;
 }
 .products{
@@ -26,7 +26,7 @@ h1{
     text-align: left;
 }
 .insert-class-name{
-    background-image: url("../../assets/berry-smoothie.png");
+    background-image: url("../../assets/fruit-salad.png");
     height: 450px;
     width: 450px;
     background-position: left;
@@ -36,7 +36,7 @@ h1{
 }
 .details .add{
     background-color: white;
-    background-color: rgb(139, 90, 90);
+    background-color: #052E73;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -45,7 +45,7 @@ h1{
 }
 .details .checkout{
     background-color: white;
-    background-color: rgb(139, 90, 90);
+    background-color: #052E73;
     width: 120px;
     height: 50px;
     text-align: center;

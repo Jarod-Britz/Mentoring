@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { StrawberryDetailsComponent } from './strawberry-details/strawberry-details.component';
 import { BerrySmoothieComponent } from './berry-smoothie/berry-smoothie.component';
 import { ChickenSaladComponent } from './chicken-salad/chicken-salad.component';
+import { FruitSaladComponent } from './fruit-salad/fruit-salad.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
  {
    path:'chicken-salad',
     component:ChickenSaladComponent
+ },
+ {
+   path:'fruit-salad',
+    component:FruitSaladComponent
  },
 
 ];

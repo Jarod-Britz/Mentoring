@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { StrawberryDetailsComponent } from './strawberry-details/strawberry-details.component';
 import { BerrySmoothieComponent } from './berry-smoothie/berry-smoothie.component';
 import { ChickenSaladComponent } from './chicken-salad/chicken-salad.component';
+import { FruitSaladComponent } from './fruit-salad/fruit-salad.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ChickenSaladComponent } from './chicken-salad/chicken-salad.component';
     HomeComponent,
     StrawberryDetailsComponent,
     BerrySmoothieComponent,
-    ChickenSaladComponent
+    ChickenSaladComponent,
+    FruitSaladComponent
   ],
   imports: [
     BrowserModule,

@@ -4,19 +4,19 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-fruit-salad',
+  templateUrl: './fruit-salad.component.html',
+  styleUrls: ['./fruit-salad.component.css']
 })
-export class HomeComponent implements OnInit {
+export class FruitSaladComponent implements OnInit {
 
-products: any;
+  products: any;
 
   customOptions: any = {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 1200,
     pullDrag: true,
     dots: false,
@@ -48,11 +48,11 @@ products: any;
         return {
           id: e.payload.doc.id,
           isEdit: false,
-          Name: e.payload.doc.data()['name'],
-          Picture: e.payload.doc.data()['picture'],
-          Price: e.payload.doc.data()['price'],
-          Description: e.payload.doc.data()['description'],
-          Ingredients: e.payload.doc.data()['ingredients'],
+          name: e.payload.doc.data()['name'],
+          picture: e.payload.doc.data()['picture'],
+          price: e.payload.doc.data()['price'],
+          description: e.payload.doc.data()['description'],
+          ingredients: e.payload.doc.data()['ingredients'],
           nutritionalValue: e.payload.doc.data()['nutritional-value'],
         };
       })
@@ -64,25 +64,9 @@ products: any;
     }
 
 
-    getProduct1(){
-      this.productsService.getProducts();
-      this.router.navigate(['/strawberry-details']);
-    }
-
-    getProduct2(){
-      this.productsService.getProducts();
-      this.router.navigate(['/berry-smoothie']);
-    }
-
-    getProduct3(){
-      this.productsService.getProducts();
-      this.router.navigate(['/chicken-salad']);
-    }
-
-    getProduct4(){
+    getProduct(){
       this.productsService.getProducts();
       this.router.navigate(['/fruit-salad']);
     }
-  }
 
-
+}
