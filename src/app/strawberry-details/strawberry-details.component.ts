@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
+import {FormControl} from '@angular/forms';
+import {TooltipPosition} from '@angular/material';
 
 @Component({
   selector: 'app-strawberry-details',
@@ -7,6 +9,10 @@ import { ProductsService } from '../products.service';
   styleUrls: ['./strawberry-details.component.css']
 })
 export class StrawberryDetailsComponent implements OnInit {
+
+positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
+
 selectedProduct;
 products;
 

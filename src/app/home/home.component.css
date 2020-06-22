@@ -41,9 +41,6 @@
     font-weight: bold;
 } */
 
-body{
-    font: Regular Poppins;
-}
 
 .carousel{
     text-align: center;
@@ -59,7 +56,6 @@ body{
     top: 15%;
     left: 16%;
     transform: translate(-50%, -50%);
-    font: Regular 61px/85px Poppins;
     letter-spacing: 7.93px;
 }
 .carousel p{
@@ -69,7 +65,6 @@ body{
     left: 19%;
     transform: translate(-50%, -50%);
     width: 29%;
-    font: Regular 20px/30px Poppins;
     letter-spacing: 0.2px;
 }
 .carousel button{
@@ -251,7 +246,7 @@ mat-icon{
 }
 .carousel .dotted{
     background-color: white;
-    border: 16px dashed #343740;
+    border: 10px dashed #343740;
     border-radius: 50%;
     position: absolute;
     width: 150px;

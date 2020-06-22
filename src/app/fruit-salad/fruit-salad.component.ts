@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service'
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {FormControl} from '@angular/forms';
+import {TooltipPosition} from '@angular/material';
 
 @Component({
   selector: 'app-fruit-salad',
@@ -9,6 +11,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./fruit-salad.component.css']
 })
 export class FruitSaladComponent implements OnInit {
+
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
 
   products: any;
 

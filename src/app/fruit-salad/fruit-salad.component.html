@@ -1,4 +1,4 @@
-<h4 class="back" routerLink="/">Back</h4>
+<h4 class="back" routerLink="/">BACK</h4>
 <h1 class="name">{{products[1].name}}</h1>
 <div class="products">
     <div class="insert-class-name">
@@ -10,7 +10,12 @@
         <p>{{products[3].ingredients}}</p>
         <h3>Nutritional Value</h3>
         <p>{{products[3].nutritionalValue}}</p>
-        <button class="add"><mat-icon>add</mat-icon></button>
+        <button class="add" mat-raised-button #tooltip="matTooltip"
+        matTooltip="Add to Cart"
+        [matTooltipPosition]="position.value"
+        matTooltipHideDelay="1000">
+        <mat-icon>add</mat-icon>
+      </button>
         <button class="checkout">CHECKOUT</button>
     </div>
 </div>
