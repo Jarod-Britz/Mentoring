@@ -7,7 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatToolbarModule,MatCardModule,MatIconModule,MatTooltipModule} from '@angular/material';
+import {MatToolbarModule,
+        MatCardModule,
+        MatIconModule,
+        MatTooltipModule
+        ,MatMenuModule
+        } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 
 import { AngularFireModule } from '@angular/fire';
@@ -37,6 +42,7 @@ import { FruitSaladComponent } from './fruit-salad/fruit-salad.component';
     MatCardModule,
     MatIconModule,
     MatTooltipModule,
+    MatMenuModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],

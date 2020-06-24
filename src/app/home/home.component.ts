@@ -16,7 +16,7 @@ products: any;
     loop: true,
     mouseDrag: true,
     touchDrag: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1200,
     pullDrag: true,
     dots: false,

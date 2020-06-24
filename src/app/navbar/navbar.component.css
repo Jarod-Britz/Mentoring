@@ -1,5 +1,5 @@
 
-mat-toolbar{
+.web{
     height: 100px;
     background-color: white;
     letter-spacing: 0px;
@@ -11,11 +11,14 @@ mat-toolbar{
     text-align: center;
     font-family: Andale Mono !important;
 }
-.blank{
+.mobile{
+    display: none;
+}
+.web .blank{
     font-size: 40px;
     font-weight: bold;
 }
-.brand{
+.web .brand{
     background: #4E4E4E;
     width: 50px;
     height: 50px;
@@ -32,16 +35,60 @@ mat-toolbar{
     margin: 2%;
     letter-spacing: 0px;
 }
-.example-spacer {
-    flex: 1 1 auto;
-  }
 .links{
     margin: 0 auto;
 }
-img{
+.web .brand img{
     height: 30px;
     margin-top: 15%;
 }
 span:hover{
     color: grey;
+}
+
+
+@media screen and (max-width: 400px){
+   .web{
+       display: none;
+   }
+   .mobile{
+       display: block;
+       height: 70px;
+        background-color: white;
+        color: #4E4E4E;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        opacity: 1;
+        font-family: Andale Mono !important;
+   }
+   .mobile button{
+       background-color: white;
+       border: none;
+       line-height: 70px;
+       text-align: center;
+   }
+   .mobile button mat-icon{
+       display: block;
+       font-size: 30px;
+       line-height: 50px;
+   }
+   .mobile .blank{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 70px;
+   }
+   .mobile .brand{
+    background: #4E4E4E;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    border-radius: 50%;
+    line-height: 70px;
+   }
+   .mobile .brand img{
+        height: 30px;
+        margin-top: 0;
+        line-height: 70px;
+   }
 }

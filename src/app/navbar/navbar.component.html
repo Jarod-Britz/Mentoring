@@ -1,10 +1,71 @@
-<mat-toolbar>
+<mat-toolbar class="web">
+    <!-- <div class="mobile">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>PRODUCTS</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>OUR STORY</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>CONTACT</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>LOGIN</span>
+              </button>
+          </mat-menu>
+    </div> -->
+
     <span class="blank">Blank</span>
+
+    
+
     <div class="links">
         <span routerLink="">PRODUCTS</span> <span class="story">|</span>
         <span routerLink="">OUR STORY</span> <span class="story">|</span>
         <span routerLink="">CONTACT</span> <span class="story">|</span>
         <span routerLink="">LOGIN</span>
     </div>
+    <!-- <span class="example-spacer"></span> -->
     <span class="brand"><img src="../../assets/bag.png" alt=""></span>
 </mat-toolbar>
+
+
+
+
+<mat-toolbar class="mobile">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>PRODUCTS</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>OUR STORY</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>CONTACT</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>LOGIN</span>
+              </button>
+          </mat-menu>
+
+    <span class="blank">Blank</span>
+
+    <span class="example-spacer"></span>
+    <span class="brand"><img src="../../assets/bag.png" alt=""></span>
+</mat-toolbar>
+
