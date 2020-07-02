@@ -1,33 +1,63 @@
 
-
 <section class="carousel">
     <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide>
-            <div class="background1" (click)="getProduct1(product)">
+        <ng-template carouselSlide *ngFor="let product of products" (click)="getProductID(product)">
+            <div class="background-image">
                 <div></div>
                 <div class=" dotted"></div>
-                <h1>Product Name</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum praesentium ipsum, reiciendis dolores
-                    quas ad esse, eius vitae possimus dolorem quae, ex porro in repudiandae. Labore cupiditate vel amet
-                    numquam!</p>
+                <h1>{{product.name}}</h1>
+                <p>{{product.description}}</p>
+                <button>ORDER NOW <mat-icon>chevron_right</mat-icon> </button>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</section>
+
+
+
+<div>
+    <mat-card *ngFor="let product of products" (click)="getProductID(product)">
+        <h1>{{product.name}}</h1>
+        <p>{{product.description}}</p>
+        <img src="product.picture" alt="Picture">
+    </mat-card>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="carousel">
+    <owl-carousel-o [options]="customOptions" *ngFor="let product of products">
+        <ng-template carouselSlide>
+            <div class="background1" (click)="getProduct()">
+                <div></div>
+                <div class=" dotted"></div>
+                <h1>{{products.Name}}</h1>
+                <p>{{products.Description}}</p>
                     <button>ORDER NOW <mat-icon>chevron_right</mat-icon> </button>
             </div>
         </ng-template>
 
         <ng-template carouselSlide>
-            <div class="background2" (click)="getProduct2(product)">
+            <div class="background2" (click)="getProduct()">
                 <div></div>
                 <div class=" dotted"></div>
-                <h1>Product Name</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quisquam quae, consectetur
-                    deleniti asperiores obcaecati modi aliquid nihil incidunt. Similique deserunt eveniet maxime esse
-                    dignissimos sit voluptas repellat mollitia magnam?</p>
+                <h1>{{product[1].Name}}</h1>
+                <p>{{products[1].Description}}</p>
                     <button>ORDER NOW <mat-icon>chevron_right</mat-icon> </button>
             </div>
         </ng-template>
 
         <ng-template carouselSlide>
-            <div class="background3" (click)="getProduct3(product)">
+            <div class="background3" (click)="getProduct()">
                 <div></div>
                 <div class=" dotted"></div>
                 <h1>Product Name</h1>
@@ -39,7 +69,7 @@
         </ng-template>
 
         <ng-template carouselSlide>
-            <div class="background4" (click)="getProduct4(product)">
+            <div class="background4" (click)="getProduct()">
                 <div></div>
                 <div class=" dotted"></div>
                 <h1>Product Name</h1>
@@ -50,11 +80,14 @@
             </div>
         </ng-template>
     </owl-carousel-o>
-</section>
+</section> -->
 
 
 
-<section class="about">
+
+
+
+<!-- <section class="about">
     <div>
         <img src="../../assets/mask1.jpg" alt="">
     </div>
@@ -69,7 +102,7 @@
             exercitationem culpa nam, porro vel voluptates aperiam amet, eius perferendis dolorem vero pariatur eum
             beatae.</p>
     </div>
-</section>
+</section> -->
 
 
 

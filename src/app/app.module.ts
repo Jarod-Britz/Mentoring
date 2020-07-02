@@ -10,8 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule,
         MatCardModule,
         MatIconModule,
-        MatTooltipModule
-        ,MatMenuModule
+        MatTooltipModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatDialogModule
         } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 
@@ -22,6 +24,7 @@ import { StrawberryDetailsComponent } from './strawberry-details/strawberry-deta
 import { BerrySmoothieComponent } from './berry-smoothie/berry-smoothie.component';
 import { ChickenSaladComponent } from './chicken-salad/chicken-salad.component';
 import { FruitSaladComponent } from './fruit-salad/fruit-salad.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -31,22 +34,26 @@ import { FruitSaladComponent } from './fruit-salad/fruit-salad.component';
     StrawberryDetailsComponent,
     BerrySmoothieComponent,
     ChickenSaladComponent,
-    FruitSaladComponent
+    FruitSaladComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
     MatTooltipModule,
     MatMenuModule,
+    MatDialogModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[StrawberryDetailsComponent, BerrySmoothieComponent]
 })
 export class AppModule { }

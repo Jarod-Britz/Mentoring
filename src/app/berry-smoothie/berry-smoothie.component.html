@@ -5,9 +5,13 @@
         
     </div>
     <div class="details">
-        <h1>R{{products[3].price}}</h1>
+        <h1 class="price">R{{products[3].price}}</h1>
         <h3>Ingredients:</h3>
         <p>{{products[3].ingredients}}</p>
+
+        <!-- <button mat-button (click)="openDialog()">Ingredients</button> -->
+
+
         <h3>Nutritional Value</h3>
         <p>{{products[3].nutritionalValue}}</p>
         <button class="add" mat-raised-button #tooltip="matTooltip"
@@ -19,3 +23,10 @@
         <button class="checkout">CHECKOUT</button>
     </div>
 </div>
+
+
+<!-- <h2 mat-dialog-title>Install Angular</h2>
+<mat-dialog-content class="mat-typography">
+  <h1>Jarod Britz</h1>
+  <p>{{products[3].ingredients}}</p>
+</mat-dialog-content> -->

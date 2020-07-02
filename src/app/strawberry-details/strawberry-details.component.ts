@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import {FormControl} from '@angular/forms';
 import {TooltipPosition} from '@angular/material';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import { BerrySmoothieComponent } from '../berry-smoothie/berry-smoothie.component';
 
 @Component({
   selector: 'app-strawberry-details',
@@ -16,7 +18,7 @@ positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
 selectedProduct;
 products;
 
-  constructor(private productsService:ProductsService) { }
+  constructor(private productsService:ProductsService,private dialog: MatDialog) { }
 
   ngOnInit() {
 //     this.selectedProduct = this.productsService.selectedProduct;
@@ -45,6 +47,15 @@ this.productsService.getProducts().subscribe(data => {
   
 }
 
+
+
+openInformation() {
+    this.dialog.open(BerrySmoothieComponent);
+
+
+  }
+
   
 
 }
+

@@ -1,0 +1,51 @@
+
+<h4 class="back" routerLink="/">BACK</h4>
+
+<h1>{{selectedProduct.name}}</h1>
+<div class="products">
+  <div class="details">
+    <h1 class="price">R{{selectedProduct.price}}</h1>
+    <h3>Ingredients:</h3>
+    <p>{{selectedProduct.ingredients}}</p>
+    <h3>Nutritional Value</h3>
+    <p>{{selectedProduct.nutritionalValue}}</p>
+    <!-- <button class="add" mat-raised-button #tooltip="matTooltip"
+    matTooltip="Add to Cart"
+    [matTooltipPosition]="position.value"
+    matTooltipHideDelay="1000">
+    <mat-icon>add</mat-icon>
+  </button> -->
+    <button class="checkout">CHECKOUT</button>
+    
+</div>
+<div>
+  <img src="{{selectedProduct.picture}}" alt="Picture">
+</div>
+</div>
+
+
+
+
+
+<!-- <h1>{{products.name}}</h1>
+<div class="products">
+    <div class="insert-class-name">
+        
+    </div>
+
+    <div class="details">
+        <h1 class="price">R{{products.price}}</h1>
+        <h3>Ingredients:</h3>
+        <p>{{products.ingredients}}</p>
+        <h3>Nutritional Value</h3>
+        <p>{{products.nutritionalValue}}</p>
+        <button class="add" mat-raised-button #tooltip="matTooltip"
+        matTooltip="Add to Cart"
+        [matTooltipPosition]="position.value"
+        matTooltipHideDelay="1000">
+        <mat-icon>add</mat-icon>
+      </button>
+        <button class="checkout">CHECKOUT</button>
+        <button mat-button (click)="openInformation()">Information</button>
+    </div>
+</div> -->

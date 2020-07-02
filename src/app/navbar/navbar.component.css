@@ -12,8 +12,9 @@
     font-family: Andale Mono !important;
 }
 .mobile{
-    display: none;
+    visibility: hidden;
 }
+
 .web .blank{
     font-size: 40px;
     font-weight: bold;
@@ -47,12 +48,155 @@ span:hover{
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 650px){
    .web{
        display: none;
    }
+
+
+   #nav-icon1 {
+    width: 32px;
+    height: 30px;
+    position: relative;
+    margin: 10px;
+    align-items: flex-end;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  #nav-icon1 span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: white;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .span-color {
+    background-color: grey !important;
+  }
+  
+  #nav-icon1 span:nth-child(1) {
+    top: 0px;
+  }
+  
+  #nav-icon1 span:nth-child(2) {
+    top: 10px;
+  }
+  
+  #nav-icon1 span:nth-child(3) {
+    top: 20px;
+  }
+  
+  #nav-icon1.open span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    background-color: #ffffff !important;
+  }
+  
+  #nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  #nav-icon1.open span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    background-color: #ffffff !important;
+  }
+  
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    background-color: grey;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  
+  .overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .overlay a {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: ease-in-out 0.2s;
+    margin: 10%;
+  }
+  
+  .overlay a:hover {
+    color: #000033;
+  }
+  
+  
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+  
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+
+
+
+
    .mobile{
-       display: block;
+       visibility: visible;
        height: 70px;
         background-color: white;
         color: #4E4E4E;
@@ -62,33 +206,42 @@ span:hover{
         opacity: 1;
         font-family: Andale Mono !important;
    }
-   .mobile button{
+   .example-spacer {
+    flex: 1 1 auto;
+  }
+   /* .mobile button{
        background-color: white;
        border: none;
        line-height: 70px;
        text-align: center;
-   }
-   .mobile button mat-icon{
+   } */
+   /* .mobile button mat-icon{
        display: block;
        font-size: 30px;
-       line-height: 50px;
-   }
+       line-height: 20px;
+   } */
    .mobile .blank{
     font-size: 40px;
     font-weight: bold;
     line-height: 70px;
    }
-   .mobile .brand{
+   /* .mobile .brand{
     background: #4E4E4E;
     width: 50px;
     height: 50px;
     opacity: 1;
     border-radius: 50%;
     line-height: 70px;
-   }
-   .mobile .brand img{
+   } */
+   /* .mobile .brand img{
         height: 30px;
         margin-top: 0;
         line-height: 70px;
-   }
+   } */
 }
+
+
+
+
+
+ 

@@ -1,47 +1,5 @@
 
 
-/* .background{
-    background-image: url("../../assets/background1.jpg"); 
-    background-color: #cccccc;
-  height: 600px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.background h1{
-    color: black;
-    text-align: center;
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 100px;
-} */
-
-/* .featured{
-    text-align: center;
-}
-.featured h1{
-    margin-top: 5%;
-} */
-/* .products{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 10%;
-}
-.products mat-card{
-    margin: 0 auto;
-}
-.products img{
-    width: 250px;
-}
-.products h5{
-    margin: 5%;
-    font-weight: bold;
-} */
-
-
 .carousel{
     text-align: center;
     margin-top: 5%;
@@ -285,46 +243,94 @@ footer{
 }
 
 
+@media screen and (max-width:1100px){
+    .about{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+    }
+}
 
-@media screen and (max-width: 400px){
+
+
+@media screen and (max-width: 650px){
+
+    .carousel h1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 7.93px;
+    }
+    .carousel p{
+    position: absolute;
+    text-align: left;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    letter-spacing: 0.2px;
+    text-align: center;
+    }
    .background1{
-    height: 210px;
-    width: 310px;
+    height: 200px;
+    width: 300px;
+    margin-top: 250px;
    }
    .background1 div{
     width: 250px;
     height: 250px;
+    background-color: white;
+   }
+   .background1 button{
+       visibility: hidden;
    }
 
    .background2{
     height: 200px;
     width: 200px;
-    margin: 0 165px;
+    margin-top: 250px;
    }
    .background2 div{
     width: 200px;
     height: 200px;
+    background-color: white;
    }
+   .background2 button{
+    visibility: hidden;
+}
 
    .background3{
     height: 200px;
     width: 200px;
-    margin: 0 165px;
+    margin-top: 250px;
    }
    .background3 div{
     width: 200px;
     height: 200px;
+    background-color: white;
+    }
+    .background3 button{
+        visibility: hidden;
     }
 
    .background4{
     height: 200px;
     width: 200px;
-    margin: 0 165px;
+    margin-top: 250px;
    }
    .background4 div{
     width: 190px;
     height: 190px;
+    background-color: white;
+    }
+    .background4 button{
+        visibility: hidden;
+    }
 
+    .carousel .dotted{
+        visibility: hidden;
     }
 
 

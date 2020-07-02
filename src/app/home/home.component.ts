@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service'
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-products: any;
+products;
+productId;
 
   customOptions: any = {
     loop: true,
@@ -44,45 +45,37 @@ products: any;
 
   ngOnInit() {
     this.productsService.getProducts().subscribe(data => {
+      console.log(data);
+      
       this.products = data.map(e => {
         return {
           id: e.payload.doc.id,
           isEdit: false,
-          Name: e.payload.doc.data()['name'],
-          Picture: e.payload.doc.data()['picture'],
-          Price: e.payload.doc.data()['price'],
-          Description: e.payload.doc.data()['description'],
-          Ingredients: e.payload.doc.data()['ingredients'],
+          name: e.payload.doc.data()['name'],
+          picture: e.payload.doc.data()['picture'],
+          price: e.payload.doc.data()['price'],
+          description: e.payload.doc.data()['description'],
+          ingredients: e.payload.doc.data()['ingredients'],
           nutritionalValue: e.payload.doc.data()['nutritional-value'],
         };
       })
+
       console.log(this.products);
-      
+      for (let index = 0; index < this.products.length; index++) {
+        $('.background-image-{{product[index].name}}').css('background-image','url(' + this.products[index].picture +')')
+        
+      }
     })
     
-      
-    }
+  }
+    
 
 
-    getProduct1(){
-      this.productsService.getProducts();
-      this.router.navigate(['/strawberry-details']);
+    getProductID(product){
+      this.productsService.getProductID(product);
+      this.router.navigate(['/product-details']);
     }
 
-    getProduct2(){
-      this.productsService.getProducts();
-      this.router.navigate(['/berry-smoothie']);
-    }
-
-    getProduct3(){
-      this.productsService.getProducts();
-      this.router.navigate(['/chicken-salad']);
-    }
-
-    getProduct4(){
-      this.productsService.getProducts();
-      this.router.navigate(['/fruit-salad']);
-    }
   }
 
 

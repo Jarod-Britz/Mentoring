@@ -41,31 +41,50 @@
 
 
 <mat-toolbar class="mobile">
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>dialpad</mat-icon>
-              <span>PRODUCTS</span>
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>voicemail</mat-icon>
-              <span>OUR STORY</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon>notifications_off</mat-icon>
-              <span>CONTACT</span>
-            </button>
-            <button mat-menu-item>
-                <mat-icon>notifications_off</mat-icon>
-                <span>LOGIN</span>
-              </button>
-          </mat-menu>
+        
 
     <span class="blank">Blank</span>
 
     <span class="example-spacer"></span>
-    <span class="brand"><img src="../../assets/bag.png" alt=""></span>
+
+    <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span>PRODUCTS</span>
+      </button>
+      <button mat-menu-item>
+        <span>OUR STORY</span>
+      </button>
+      <button mat-menu-item>
+        <span>CONTACT</span>
+      </button>
+      <button mat-menu-item>
+          <span>LOGIN</span>
+        </button>
+    </mat-menu> -->
+    
+    <div class="navbar">
+      <div class="d-flex flex-row-reverse">
+        <div id="nav-icon1">
+          <span class="span-color"></span>
+          <span class="span-color"></span>
+          <span class="span-color"></span>
+        </div>
+        <div class="overlay" id="overlay">
+          <div class="overlay-content">
+            <a [routerLink]="['/']">PRODUCTS</a>
+            <a [routerLink]="['/']">OUR STORY</a>
+            <a [routerLink]="['/']">CONTACT</a>
+            <a [routerLink]="['/']">LOGIN</a>
+          </div>
+        </div>
+      </div>
+    </div>
 </mat-toolbar>
+
+
+
+
 

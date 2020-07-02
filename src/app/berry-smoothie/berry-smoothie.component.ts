@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import {FormControl} from '@angular/forms';
 import {TooltipPosition} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-berry-smoothie',
@@ -45,7 +46,7 @@ export class BerrySmoothieComponent implements OnInit {
   }
 
 
-  constructor(private productsService:ProductsService,private router: Router) { }
+  constructor(private productsService:ProductsService,private router: Router,public dialog: MatDialog) { }
 
   ngOnInit() {
     this.productsService.getProducts().subscribe(data => {
@@ -73,5 +74,13 @@ export class BerrySmoothieComponent implements OnInit {
       this.productsService.getProducts();
       this.router.navigate(['/strawberry-details']);
     }
+
+  //   openDialog() {
+  //   const dialogRef = this.dialog.open(BerrySmoothieComponent);
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log(`Dialog result: ${result}`);
+  //   });
+  // }
 
 }

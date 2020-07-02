@@ -5,12 +5,17 @@ import { StrawberryDetailsComponent } from './strawberry-details/strawberry-deta
 import { BerrySmoothieComponent } from './berry-smoothie/berry-smoothie.component';
 import { ChickenSaladComponent } from './chicken-salad/chicken-salad.component';
 import { FruitSaladComponent } from './fruit-salad/fruit-salad.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 const routes: Routes = [
  {
    path:'',
     component:HomeComponent
+ },
+ {
+   path:'product-details',
+    component:ProductDetailsComponent
  },
  {
    path:'strawberry-details',

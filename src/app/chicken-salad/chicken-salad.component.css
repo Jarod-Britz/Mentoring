@@ -61,3 +61,28 @@ h1{
     float: right;
 }
 
+
+
+@media screen and (max-width:650px){
+    h1{
+        text-align: center;
+        margin: 0;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 1fr;
+        margin: 5%;
+    }
+    .insert-class-name{
+        height: 300px;
+        width: 300px;
+    }
+    .price{
+        text-align: left;
+        font-size: 60px;
+    }
+    .details{
+        border: none;
+    }
+}
